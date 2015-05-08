@@ -26,7 +26,7 @@ describe('features.welcome', function () {
         return loginWorkflow(driver, users.singleAgencyNoAvatar.username, users.singleAgencyNoAvatar.password)
             .waitForElementByCssSelector('#splash-feature', 20000)//We'll wait for the splash screen to show, within 20 seconds
             .sleep(1000)
-            .elementByCssSelector('#splash-feature') //This will throw a rejection if the css selector comes up with no element
+            .elementByCssSelector('img:not(.ng-hide)') //This will throw a rejection if the css selector comes up with no element
             .should.eventually.be.rejected; //This will catch that rejection, as it's expected and we want it.
     });
 
