@@ -2,5 +2,13 @@
   "singleAgency": {
     "username": "vsso@grr.la",
     "password": ")abc123abc"
+  },
+  "singleAgencyNoAvatar": {
+    "username": "vssoalpha@grr.la",
+    "password": "-abc123abc"
+  },
+  "multiAgency": {
+    "username": "Multiagent@grr.la",
+    "password": "!abc123abc"
   }
 }

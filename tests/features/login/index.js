@@ -1,5 +1,4 @@
 var loginWorkflow = require('common/workflow/login');
-//var pinWorkflow = require('common/workflow/pinEntry');
 var Q = require('q');
 var users = require('data/users');
 
