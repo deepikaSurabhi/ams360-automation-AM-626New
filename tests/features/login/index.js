@@ -23,5 +23,10 @@ describe('features.login', function () {
         return loginWorkflow(driver, 'wrong@wrong.com', 'wrong');
             //.waitForElementByCssSelector('#login-feature .alert', 10000).sleep(10000);
     });
+    
+    it('will give an error if you try to login with out the username and password', function () {
+        return loginWorkflow(driver, ' ', ' ');
+            //.waitForElementByCssSelector('#login-feature .alert', 10000).sleep(10000);
+    });
 
 });
