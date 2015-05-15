@@ -10,5 +10,10 @@
   "multiAgency": {
     "username": "Multiagent@grr.la",
     "password": "!abc123abc"
+  },
+  "firstrun": {
+    "username": "mohantbi@vertafore.com",
+    "password": "%abc123abc"
   }
+  
 }
