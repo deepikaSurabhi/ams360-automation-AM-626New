@@ -21,7 +21,6 @@ describe('features.login', function () {
     xit('will log in with the correct username/password for multi agency', function () {
         return loginWorkflow(driver, users.multiAgency.username, users.multiAgency.password).sleep(10000)
         .waitForElementByCssSelector('#first-run-feature', 10000);
-       
     });
 
     xit('will give an error if you try to login with the wrong username and password', function () {

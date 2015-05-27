@@ -1,5 +1,5 @@
 before(function () {
-    this.timeout(800000);
+    this.timeout(2000000);
     var driver = require('helpers/driver');
     return driver.init();
 });
