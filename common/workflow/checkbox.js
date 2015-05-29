@@ -8,6 +8,8 @@ module.exports = function (driver, username, password) {
         .sendKeys(username)
         .elementByCssSelector('#login-feature input[type=password]')
         .sendKeys(password)
+        .elementByCssSelector('#login-feature input[type="checkbox"]')
+        .click().click()
         .elementByCssSelector('#login-feature form')
         .submit();
 };

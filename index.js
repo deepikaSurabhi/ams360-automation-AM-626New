@@ -32,6 +32,7 @@ if(!argv.environment) {
     config.run.environment = argv.environment;
 }
 
+require('./helpers/setup');
 var server = require('./helpers/server.js');
 server.start().then(function () {
     console.log("Server is up")

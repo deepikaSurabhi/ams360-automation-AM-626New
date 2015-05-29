@@ -7,7 +7,7 @@ var config = require('config');
 module.exports = {
     start: function () {
         var mochaConfig = {
-            timeout: 60000,
+            timeout: 80000,
             grep: config.get('run.testGroup') != 'all' ? config.get('run.testGroup') : undefined
         };
 
