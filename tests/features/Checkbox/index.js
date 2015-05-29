@@ -14,7 +14,7 @@ describe('features.login', function () {
     beforeEach(function () {
         return driver.eval("window.location.hash='#/login'").sleep(10000);
     });
-    it('will log in with the correct username/password for single agency with checkbox', function () {
+    it('will test the checkbox with the correct username/password', function () {
         //var act=driver.elementByCssSelector('#login-feature input[type=email]');
         //var exp=driver.elementByCssSelector('#login-feature input[type=email]');
         return checkboxWorkflow(driver, users.singleAgency.username, users.singleAgency.password).sleep(10000)
@@ -23,7 +23,7 @@ describe('features.login', function () {
         .elementByXPath('//*[@id="master-layout"]/div[1]/md-sidenav/md-content/div[4]/button')
         .click().sleep(10000)
         .eval("window.location.hash='#/login'").sleep(20000)
-        .textPresent('vsso@grr.la', '#login-feature input[type=email]', true);
+        .textPresent(users.singleAgency.username, '#login-feature input[type=email]', true);
         //assert.equal(act, exp, "user name should be same");
     });
     });

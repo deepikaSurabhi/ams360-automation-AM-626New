@@ -1,7 +1,7 @@
 {
   "singleAgency": {
     "username": "vsso@grr.la",
-    "password": "-abc123abc"
+    "password": "=abc123abc"
   },
   "singleAgencyNoAvatar": {
     "username": "vssoalpha@grr.la",

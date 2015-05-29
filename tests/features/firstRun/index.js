@@ -19,7 +19,7 @@ describe('features.firstRun', function() {
 
     });
 
-    xit('will not require a returning user to select the agency', function() {
+    it('will not require a returning user to select the agency', function() {
         return driver.elementByCssSelector('#pick-agency-feature select').click().sleep(5000)
         .elementByCssSelector('#pick-agency-feature button').click().click()
         .waitForElementByCssSelector('#splash-feature', 20000)
@@ -33,7 +33,7 @@ describe('features.firstRun', function() {
         .eval("window.location.hash='#/dash'").sleep(20000);
     });
 
-    xit('will require to select the agency', function() {
+    it('will require user to select the agency', function() {
         return driver.elementByCssSelector('#pick-agency-feature select')
         .elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[2]')
         .click().sleep(5000)
@@ -49,12 +49,11 @@ describe('features.firstRun', function() {
         .waitForElementByCssSelector('#splash-feature', 20000)
         .eval("window.location.hash='#/dash'").sleep(20000);
     });
-    
 
-    xit('Agency selection check', function(done) {
+    it('Will change the agency selection in settings tap', function(done) {
         
-        var actual= driver.elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[1]');
-        var net= driver.elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[2]');
+        //var actual= driver.elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[1]');
+        //var net= driver.elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[2]');
         return driver.elementByCssSelector('#pick-agency-feature select')
         .elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[2]')
         .click().sleep(5000)
@@ -76,8 +75,8 @@ describe('features.firstRun', function() {
         .elementByXPath('//*[@id="master-layout"]/div[1]/md-sidenav/md-content/div[3]/button')
         .click().sleep(10000);
         //.elementByXPath('//*[@id="pick-agency-feature"]/div[1]/div/select/option[1]');
-        assert.equal(actual, net, "agency selection should be same");
-        done();
+        ///assert.equal(actual, net, "agency selection should be same");
+        //done();
     });
 
 }); 
