@@ -26,4 +26,12 @@ describe('features.eula', function () {
               .waitForElementByCssSelector('#splash-feature', 20000).sleep(20000)
               .eval("window.location.hash='#/dash'").sleep(10000);
     });
+    
+    it('Will redirected to splash screen if we agree the EULA for multiAgency', function () {
+        return loginWorkflow(driver, users.multiAgency1.username, users.multiAgency1.password).sleep(10000)
+              .elementByXPath('//*[@id="eula-agreement-feature"]/footer/button[1]').click().click().sleep(5000)
+              .elementByCssSelector('#pick-agency-feature button').click().click()
+              .waitForElementByCssSelector('#splash-feature', 20000).sleep(20000)
+              .eval("window.location.hash='#/dash'").sleep(10000);
+    });
     });
