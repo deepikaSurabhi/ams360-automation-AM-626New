@@ -33,7 +33,7 @@ describe('features.eula', function () {
               .eval("window.location.hash='#/dash'").sleep(10000);
     });
     
-    it('Will redirected to splash screen if we agree the EULA for multiAgency', function () {
+    it('Will redirected to agency selection page if we agree the EULA for multiAgency', function () {
         return loginWorkflow(driver, users.multiAgency1.username, users.multiAgency1.password).sleep(10000)
               .elementByXPath('//*[@id="eula-agreement-feature"]/footer/button[1]').click().click().sleep(5000)
               .elementByCssSelector('#pick-agency-feature button').click().click()
