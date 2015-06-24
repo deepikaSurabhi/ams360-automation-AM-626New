@@ -14,6 +14,9 @@
   "multiAgency1": {
     "username": "mohantbi@vertafore.com",
     "password": "^abc123abc"
+  },
+  "clientSearch": {
+  "name":"tim"
   }
   
 }
