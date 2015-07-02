@@ -27,7 +27,8 @@ describe('features.ClientRightPane', function () {
               .elementByCssSelector('#search input[placeholder="Search"]').sleep(5000)
               .sendKeys(constants.clientSearch.name).click().sleep(5000)
               .elementByCssSelector('li:nth-child(1)').click().sleep(10000)
-              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[1]/button').click().click().sleep(20000);
+              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[1]/button').click().click().sleep(20000)
+              .should.eventually.be.fulfilled;
     });
     
     it('will select the client policies', function () {
@@ -39,7 +40,8 @@ describe('features.ClientRightPane', function () {
               .elementByCssSelector('#search input[placeholder="Search"]').sleep(5000)
               .sendKeys(constants.clientSearch.name).click().sleep(5000)
               .elementByCssSelector('li:nth-child(2)').click().sleep(10000)
-              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[2]/button').click().click().sleep(10000);
+              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[2]/button').click().click().sleep(10000)
+              .should.eventually.be.fulfilled;
     });
     
     it('will select the client Claims', function () {
@@ -51,7 +53,8 @@ describe('features.ClientRightPane', function () {
               .elementByCssSelector('#search input[placeholder="Search"]').sleep(5000)
               .sendKeys(constants.clientSearch.name).click().sleep(5000)
               .elementByCssSelector('li:nth-child(1)').click().sleep(10000)
-              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[3]/button').click().click().sleep(10000);
+              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[3]/button').click().click().sleep(10000)
+              .should.eventually.be.fulfilled;
     });
     
     it('will select the client Documents', function () {
@@ -63,7 +66,8 @@ describe('features.ClientRightPane', function () {
               .elementByCssSelector('#search input[placeholder="Search"]').sleep(5000)
               .sendKeys(constants.clientSearch.name).click().sleep(5000)
               .elementByCssSelector('li:nth-child(1)').click().sleep(10000)
-              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[4]/button').click().click().sleep(10000);
+              .elementByXPath('//*[@id="master-layout"]/div[2]/md-sidenav/md-content/div/div[4]/button').click().click().sleep(10000)
+              .should.eventually.be.fulfilled;
         
     });
  });
